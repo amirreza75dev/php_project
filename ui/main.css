@@ -1,0 +1,426 @@
+@font-face {
+    font-family: header, sans-serif;
+    src: url('fonts/Summer-Vibes-OTF.otf');
+}
+@font-face {
+    font-family: chat, sans-serif;
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.wrapper{
+    background-color: #FF5733;
+    margin: 0 auto;
+    width: 80%;
+    min-height: 800px;
+    display: flex;
+    position: relative;
+
+
+
+}
+
+.left-bar{
+    flex: 1;
+    background-color: #C7E5EF;
+    position: relative;
+
+
+}
+
+.right_bar{
+    flex: 3;
+    background-color: #DDF1EE;
+
+}
+
+.right_bar_header{
+    height: 5%;
+    font-family: header;
+    text-align: center;
+    color: #C70039;
+    font-size: 1.5rem;
+    position: relative;
+
+}
+.login , .logout{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+
+}
+.sign_up_link{
+    position: absolute;
+    right: 10%;
+    top: 0;
+}
+.login a, .logout a,.sign_up_link a{
+    color: white;
+    
+    border-radius: 5px;
+}
+.right_bar_content{
+    display: flex;
+    height: 95%;
+    width: 100%;
+
+}
+hr{
+    padding: 0;
+    margin: 0;
+}
+
+.chats{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.open_chat{
+    flex: 3;
+    background-color: #f5f2ee;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+.show_loader .show_on{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 20%;
+    display: block;
+    
+}
+.show_loader .show_off{
+    display: none;
+}
+
+.contacts_people{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    height: auto;
+}  
+
+.contacts_people span{
+    flex: auto;
+
+}
+
+.contacts_people p{
+    margin: 2px;
+
+}
+
+#contacts_show{
+    position: relative;
+
+}
+.categories{
+    position: absolute;
+    height: 60%;
+    width: 40px;
+    background-color: rgb(33, 131, 131);
+    right: 0;
+    bottom: 0;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#icon_radio_buttons{
+    height: 60%;
+    width: 40px;
+}
+.categories label{
+    display: block;
+    height: 100%;
+    width: 40px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.categories img{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: -22%;
+    left: -1%;
+}
+.person{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: chat;
+
+}
+
+.person_img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+
+}
+
+
+/* sing up page style */
+
+
+#form{
+    
+    margin: 100px auto;
+    position: relative;
+}
+
+#form input{
+    background: hidden;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+#form input[type = 'submit']{
+    width: 100%;
+    cursor: pointer;
+}
+.sign{
+    text-align: center;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.btn_submit{
+    width: 100%;
+    padding: 5px 0;
+}
+
+
+/* login */
+.form_login{
+    
+    margin: 100px auto;
+}
+
+.form_login input{
+    background: hidden;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+.form_login input[type = 'submit']{
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.sign-hidden{
+    display: none;
+}
+
+/* 
+password check */
+
+.pwd_error{
+    display: none;
+    color: red;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.box_error{
+    border: 1px solid red;
+    display: block;
+}
+
+
+
+.modal-login{
+    width: 200px;
+    
+    z-index: 5;
+    display: hidden;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    color: white;
+    text-align: center;
+
+    
+}
+.modal-login a{
+    color: white;
+}
+
+.modal-login-show{
+    display: block;
+}
+
+.settings{
+
+    width: 100%;
+    position: relative;
+    display: none;
+
+    
+}
+
+.settings #form{
+    margin-left: 50px !important;
+ 
+}
+.settings button{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+.settings_modal_on{
+    display: block;
+}
+
+.settings_modal_off{
+    display: none;
+}
+
+.close_setting{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+}
+.close_setting img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#setting_modal{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    height: 50%;
+    background-color: #1792bb;
+    
+}
+#text_update{
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* 
+chat section */
+
+#chats_with_person{
+    width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 92%;
+}
+
+#reciver_chat{
+    width: 80%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#sender_chat{
+    width: 80%;
+    float: right;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: start;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    transform: translateX(21%);
+
+    
+    
+}
+
+
+
+#reciver_chat img , #sender_chat img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+
+
+
+}
+#reciver_chat p , #sender_chat p{
+
+    margin: 0 10px;
+    width: 100%;
+
+
+
+
+}
+
+.send_chat{
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+
+#send_btn{
+    width: 12%;
+    height: 100%;
+}
+#text_area{
+    width: 85%;
+    height: 100%;
+}
+
+.chat_list_item{
+    border: 1px dotted black;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.chats_list{
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    margin-top: 20px;
+
+}
